@@ -61,7 +61,7 @@ def SendSticker(message, position, complexity, attribute, type_of_battle):
             break
         elif pos == position and comp == complexity and attr == attribute and tob == type_of_battle:
             bot.send_message(message, f"Вы - {hero}")
-            sticker = open(f'heroes\{hero}.png', "rb")
+            sticker = open(f'heroes/{hero}.png', "rb")
             bot.send_sticker(message, sticker)
             sticker.close()
             if not test_passed:
